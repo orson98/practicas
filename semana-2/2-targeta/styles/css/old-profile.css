@@ -1,0 +1,166 @@
+:root{
+    scroll-behavior: smooth;
+    --primary-theme-color:#20322a;
+    --secondary-theme-color:#282c34;
+    --text-color: #fff;
+    --secondary-shadow-color:#21242c80;
+    --shadow-collor: #8888;
+    --button-color-active:#fff;
+    --button-text-color :#000;
+    --padding-section:2em 0;
+    --padding-container:0 2rem;
+    --primary-highlight:#61dafb;
+    --primary-shadow-color:#21242c80;
+    --secondary-highlight:#ffd700;
+    --padding-section :4rem 0;
+    --padding-container: 0 2rem;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+    --max-width-container:1024px;
+
+}
+
+
+
+.main{
+
+    max-height: 200vh;
+ 
+}
+.profile{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url( https://img.freepik.com/vector-gratis/luna-llena-cielo-nocturno-paisaje-bosque-oscuro_107791-9496.jpg?w=2000);
+    overflow: hidden;
+
+}
+.profile::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+   
+    background-image: linear-gradient(transparent, var(--primary-theme-color));
+}
+.profile__container{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+
+
+}
+.profile__info{
+    text-align: center;
+
+}
+.profiele__info-title
+{
+ margin :0;
+}
+.profile__info-subtitle{
+    margin :0;
+}
+.profile__info-description{
+
+
+   display: none;
+}
+
+.profile__info-link-container
+{
+       display: flex; 
+       gap: 1rem ;
+       justify-content: center;
+}
+.profile__info-link  {
+
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    color: var(--button-text-color);
+    font-weight: 700;
+    background-color: var(--button-color-active);
+    padding: 0.5em 1.5em;
+
+}
+.profile__figure{
+ 
+}
+.profile__figure-image-container{
+
+
+    position: relative;
+
+    margin: 0;
+    max-width: 256px;
+    display: flex;
+    
+
+}
+.profile__figure-image{
+
+    width: 100%;
+    border-radius: 50%;
+
+
+}
+.profile__figure-tech-one{
+    position: absolute;
+    width: 25%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.profile__figure-tech-two{
+    position: absolute;
+    width: 25%;
+    top :50% ;
+    left: 0;
+    transform: translate(-50%,-50%);
+
+}
+.profile__figure-tech-three{
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%,-50%);
+ 
+}
+.profile__figure-tech-four
+{
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} 
+
+
+.wave-separator{
+
+    width: 100%;
+     margin: 0;
+}
+.wave-separator--r-180deg{
+    transform: rotate(180deg);
+}
+.wave-separator__container{
+
+    margin: 0;
+}
+.wave-separator__wave{
+    display: flex;
+    width: 100%;
+   
+}

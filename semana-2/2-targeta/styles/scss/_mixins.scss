@@ -1,0 +1,45 @@
+@mixin d-flex-fd-ai-jc-g($flex-direction:row ,$alain-items: stretch,$justify-content: stretch ,$gap:0){
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $alain-items;
+    justify-content: $justify-content;
+    gap: $gap;
+}
+
+@mixin button($padding: 0.25em 1em,$font-weight:700 , $border-radius: 0.5rem){
+   background-color: var(--button-color-active);
+   border : 0.0625 rem solid var(--button-color);
+   border-radius: $border-radius;
+   color: var(--button-text-color);
+   text-shadow: 0 0 0 0.24rem var(--primary-theme-color);
+   font-weight: $font-weight;
+   padding: $padding;
+   transition:  var(--all-transitions);
+
+&--active,
+&:hover{
+   background-color: white;
+}
+
+
+
+}
+@mixin decorator ($top: 0, $left:0 ,$width:100%,$tranform: translate(-50% ,-50%)) {
+   position: absolute;
+   top: $top;
+   left: $left;
+   width: $width;
+   transform: $tranform;
+   animation: decorator-jump 1s ease-in-out infinite alternate;
+
+   
+}
+@mixin deskop() {
+
+    @media(min-width: 854px){
+
+       @content;
+    }
+
+    
+}

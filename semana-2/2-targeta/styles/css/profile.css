@@ -1,0 +1,19 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 86 | /         @include desktop(){
+ * 87 | |             padding: 2rem;
+ * 88 | |             text-align: start;
+ * 89 | \         }
+ *    '
+ *   semana-2\2-targeta\styles\scss\profile.scss 86:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 86 \2502  \250c          @include desktop(){\a 87 \2502  \2502              padding: 2rem;\a 88 \2502  \2502              text-align: start;\a 89 \2502  \2514          }\a    \2575 \a   semana-2\\2-targeta\\styles\\scss\\profile.scss 86:9  root stylesheet";
+}

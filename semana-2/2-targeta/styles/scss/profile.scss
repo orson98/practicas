@@ -1,0 +1,173 @@
+
+@import 'animations';
+@import 'mixins';
+
+
+:root{
+    scroll-behavior: smooth;
+    --primary-theme-color:#20322a;
+    --secondary-theme-color:#282c34;
+    --text-color: #fff;
+    --secondary-shadow-color:#21242c80;
+    --shadow-collor: #8888;
+    --button-color-active:#fff;
+    --button-text-color :#000;
+    --padding-section:2em 0;
+    --padding-container:0 2rem;
+    --primary-highlight:#61dafb;
+    --primary-shadow-color:#21242c80;
+    --secondary-highlight:#ffd700;
+    --padding-section :4rem 0;
+    --padding-container: 0 2rem;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+    --max-width-container:1024px;
+
+}
+
+    @keyframes decorator-jump{
+        100%{
+            margin-top: 1rem;
+        }
+    }
+   
+
+ 
+    .profile{
+
+        position: relative;
+        @include d-flex-fd-ai-jc-g(column,center,center);
+        background-image: url( https://img.freepik.com/vector-gratis/luna-llena-cielo-nocturno-paisaje-bosque-oscuro_107791-9496.jpg?w=2000);
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        
+
+        &::after {
+            content:'';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 6rem ;
+            background-image: linear-gradient(transparent,var(primary-theme-color));
+        }
+
+    &__container{
+       display: grid;
+
+       gap: 2rem;
+       max-width: var(--max-width-container);
+       margin: auto;
+       padding: var(--padding-container);
+       @include deskop(){
+           grid-template-columns: 1fr 1fr;
+       }
+    }
+
+    &__info{
+        @include d-flex-fd-ai-jc-g(column,center,center, 1rem);
+        background-color: var(--secondary-shadow-color);
+        border-radius: var(--border-radius);
+        box-shadow: 
+         0 0 0 0.125 rem var(--primary-shadow-color),
+         0 0 0 0.125 rem var(--primary-shadow-color);
+         padding: 1rem;
+        text-align: center;
+        transition: var(--all-transitions);
+
+        &:hover{
+            box-shadow: 
+            0 0 0 0.25 rem var(--primary-highlight),
+             0 0 0.5 0 rem var(--secondary-highlight),
+             0 0 0.75 0 rem var(--secondary-highlight) ;
+        }
+    
+        @include desktop(){
+            padding: 2rem;
+            text-align: start;
+        }
+       
+    }
+
+
+    
+    &__info-title{
+
+
+        font-size:1.25rem;
+        margin:0;
+        
+        
+    }
+    &__info-subtitle{
+
+        font-size:1.25rem;
+        margin:0;
+    
+        
+    }
+    &__info-description{
+       display: none;
+    }
+    @include desktop(){
+        display: flex;
+        margin: 0;
+    }
+
+    &__info-link-container{
+     
+     
+        @include d-flex-fd-ai-jc-g(row, center, center ,1rem);
+        @include desktop(){
+           max-width: 360px;
+        }
+  
+  
+    }
+
+   
+
+    &__info-link{
+        text-decoration: none;
+        @include button(0.5rem 1rem, 800 , var(--border-radius));
+    }
+
+   &__figure{
+       @include d-flex-fd-ai-jc-g(column,center,center);
+    
+     }
+   &__figure-image-container {
+       position: relative;
+       display: flex;
+       max-width: 256px;
+       margin: 0;
+   }
+
+   &__figure-image{
+       width: 100%;
+       border-radius: 50%;
+       transition: var(--all-transitions);
+
+    &:hover{
+        box-shadow:   0 0 0.25rem 0  var(--primary-highlight)
+        0 0 0.25rem 0  var(--primary-highlight);  
+    }
+   }
+    &__figure-tech-one {
+    @include decorator (100%, 50%,25%);
+    }
+    &__figure-tech-two {
+    @include decorator (50%,0,25%);
+    }
+    &__figure-tech-three{
+    @include decorator (50%,100%,25%);
+    }
+    &__figure-tech-for{
+    @include decorator (0%,50%,25%);
+    }
+
+   }
+    
+    
+
